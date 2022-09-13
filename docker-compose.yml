@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+    nans-template-saas:
+        container_name: nans-template-saas
+        build:
+            context: ./
+            dockerfile: docker/Dockerfile
+        ports:
+            - "8085:85"
+        networks:
+            - nans-network
+        volumes:
+            - ./config/apache/custom.conf:/etc/apache2/sites-enabled/default.conf
+            - ./config/apache/custom_ports.conf:/etc/apache2/ports.conf
+            - type: bind
+              source: ./
+              target: /var/www/html/nans-template-saas
+volumes:
+    src:
+networks:
+  nans-network:
+    external: true
