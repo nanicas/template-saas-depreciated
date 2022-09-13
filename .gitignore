@@ -31,4 +31,3 @@ database/migrations/2021_11_03_225431_create_authorizations_table.php
 
 routes/lego.php
 routes/template_web.php
-resources/template
