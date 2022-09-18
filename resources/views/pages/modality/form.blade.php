@@ -1,4 +1,4 @@
-@extends($view_prefix . 'layouts.crud.form')
+@extends('layouts.crud.form')
 @section('crud-form-content')
 @php
 extract($data);

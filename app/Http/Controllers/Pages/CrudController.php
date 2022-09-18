@@ -8,7 +8,9 @@ abstract class CrudController extends CrudControllerVendor
 {
     public function __construct()
     {
-        $this->configureIndex('packaged', false);
+        if (!$this->existsConfigIndex('packaged')) {
+            $this->configureIndex('packaged', false);
+        }
 
         parent::__construct();
     }

@@ -1,4 +1,4 @@
-@extends($view_prefix . 'layouts.crud.list')
+@extends('layouts.crud.list')
 @section('crud-content')
 <table class="table table-bordered table-sm table-striped">
     <thead>
