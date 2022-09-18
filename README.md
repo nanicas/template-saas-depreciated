@@ -14,6 +14,7 @@ php artisan vendor:publish --tag="template_core:routes"
 php artisan vendor:publish --tag="template_core:resources"
 php artisan vendor:publish --tag="template_core:public"
 php artisan vendor:publish --tag="template_core:views"
+php artisan vendor:publish --tag="template_core:config"
 
 npm run dev
 ```
