@@ -4,12 +4,15 @@
 .phpunit.result.cache
 .idea
 .vscode
+.DS_Store
 
 public/hot
 public/storage
 public/image/entities/
 public/css/app_framework.css
 public/js/app_framework.js
+public/.DS_Store
+public/image/.DS_Store
 public/template
 public/vendor
 storage
