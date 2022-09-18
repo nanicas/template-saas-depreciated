@@ -28,6 +28,9 @@ package-lock.json
 composer.lock
 
 database/migrations/2021_11_03_225431_create_authorizations_table.php
+config/template.php
 
 routes/lego.php
 routes/template_web.php
+resources/views/vendor
+resources/template
