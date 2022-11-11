@@ -58,7 +58,7 @@ class ModalityService extends AbstractCrudService
         return $this->getRepository()->update($modality);
     }
 
-    public function getIndexData()
+    public function getIndexData(array $data = [])
     {
         $rows = $this->getRepository()->getAllBySlug(Helper::getSlug());
 
