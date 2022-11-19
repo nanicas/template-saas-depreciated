@@ -13,18 +13,20 @@
     </thead>
     <tbody>
         @foreach($rows as $modality)
-        <tr>
-            <td>{{ $modality->getId() }}</td>
-            <td>{{ $modality->getName() }}</td>
-            <td>{{ $modality->getCost() }}</td>
-            <td>{{ $modality->getCreatedAt() }}</td>
-            <td>{{ $modality->getUpdatedAt() }}</td>
-            <td class="text-center">
-                <a class="btn btn-info" href="{{ route('modality.show', $modality->getId()) }}">
-                    Editar
-                </a>
-            </td>
-        </tr>
+            @php $id = $modality->getId() @endphp
+            <tr data-id="{{ $id }}">
+                <td>{{ $id }}</td>
+                <td>{{ $modality->getName() }}</td>
+                <td>{{ $modality->getCost() }}</td>
+                <td>{{ $modality->getCreatedAt() }}</td>
+                <td>{{ $modality->getUpdatedAt() }}</td>
+                <td class="text-center">
+                    <a class="btn btn-info" href="{{ route('modality.show', $id) }}">
+                        Editar
+                    </a>
+                    @include($view_prefix . 'components.buttons.delete-button', ['route' => route('modality.destroy', $id)])
+                </td>
+            </tr>
         @endforeach
     </tbody>
 </table>
