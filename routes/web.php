@@ -17,7 +17,7 @@ use Zevitagem\LegoAuth\Helpers\Helper;
 $middlewares = Helper::defineLaravelWebMiddlewares(['web'], $legoConfig);
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Auth::routes();
